@@ -28,8 +28,8 @@ var applicationInsightsIdentity = 'ClientId=${identityClientId};Authorization=AA
 // The application backend is a function app
 module appServicePlan 'br/public:avm/res/web/serverfarm:0.1.1' = {
   name: 'appserviceplan'
-  params: {
-    name: '${abbrs.webServerFarms}${resourceToken}'
+  params: azd env new snippy-mcp-lab-53215763 --subscription 18958bde-84ec-4511-a4c5-4d737dd77ac7 --location eastus2{
+    name: '${abbrs.webServerFarms}'
     location: regionSelector.getFlexConsumptionRegion(location)
     tags: tags
     sku: {

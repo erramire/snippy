@@ -1,0 +1,8 @@
+POST http://localhost:7071/api/snippets
+Content-Type: application/json
+
+{
+"name": "test-snippet",
+"projectId": "test-project",
+"code": "print('Snippy')"
+}
